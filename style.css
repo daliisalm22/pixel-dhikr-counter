@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&display=swap');
+
+:root{
+    --pink: #f4b8e4;
+    --yellow: #fde68a;
+    --green: #b5c489;
+    --blue: #b4e1e9;
+    --purple: #c6b9f7;
+    --black: #02020a;
+    --white: #f1edee;
+}
+
+body{
+    font-family: 'Handjet', sans-serif;
+    background-color: var(--pink);
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+}
+
+h1{
+    font-size: 35px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+.color-btn{
+    height: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#counter-img{
+    width: 300px;
+    height: auto;
+}
