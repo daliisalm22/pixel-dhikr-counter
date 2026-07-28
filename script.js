@@ -37,3 +37,17 @@ prevBtn.addEventListener('click', () => {
     updateDhikrDisplay();
 });
 updateDhikrDisplay();
+
+
+let currentCount = 0;
+const countDisplay = document.getElementById('count-display');
+const counterBtn = document.getElementById('counter-btn');
+const resetBtn = document.getElementById('reset-btn');
+counterBtn.addEventListener('click', () => {
+    currentCount++;
+    countDisplay.textContent = currentCount;
+})
+resetBtn.addEventListener('click', () => {
+    currentCount = 0;
+    countDisplay.textContent = currentCount;
+})

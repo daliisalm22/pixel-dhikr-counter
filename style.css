@@ -36,7 +36,46 @@ h2{
     font-family: 'Handjet', sans-serif;
 }
 
+#counter-btn{
+    z-index: 10000;
+    position: absolute;
+    background: transparent;
+    border: none;
+    transform: translate(-198px, 186px);
+    cursor: pointer;
+}
+
 #counter-img{
     width: 300px;
     height: auto;
+}
+
+#reset-btn{
+    z-index: 10000;
+    position: absolute;
+    background: transparent;
+    border: none;
+    transform: translate(-114px, 161px);
+    cursor: pointer;
+}
+
+#counter-btn:active{
+    transform: translate(-198px, 186px) scale(0.98);
+}
+
+#reset-btn:active{
+    transform: translate(-114px, 161px) scale(0.96);
+}
+
+#count-display{
+    color: var(--white);
+    font-size: 47px;
+    text-align: right;
+    width: 150px;
+    position: absolute;
+    transform: translate(-220px, 67px);
+    z-index: 99999;
+    font-family: 'Handjet', sans-serif;
+    background: transparent;
+    border: none;
 }
