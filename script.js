@@ -41,13 +41,6 @@ const dhikrs = [
     {english: "Allahumma salli 'ala Muhammad", arabic: "ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ"},
     {english: "Hasbunallah wa ni'mal-wakil", arabic: "حَسْبُنَا ٱللَّٰهُ وَنِعْمَ ٱلْوَكِيلُ"},
 ];
-const colorNames = {
-    "#f4b8e4": "pink",
-    "#fde68a": "yellow",
-    "#b5c489": "green",
-    "#b4e1e9": "blue",
-    "#c6b9f7": "purple"
-};
 let currentIndex = localStorage.getItem('dhikrIndex') ? parseInt(localStorage.getItem('dhikrIndex')) : 0;
 let dhikrCounts = JSON.parse(localStorage.getItem('dhikrCounts')) || {};
 const englishDisplay = document.getElementById('english-text');
@@ -101,21 +94,25 @@ counterBtn.addEventListener('click', () => {
             const goalSound = document.getElementById('goal-sound');
             if (goalSound){
                 goalSound.currentTime = 0;
-                goalSound.play();
+                goalSound.play()
             }
         }
-    } 
-    else{
-            if (!isMuted){
-            clickSound.currentTime = 0;
-            clickSound.play();
+        if (counterImg){
+            counterImg.classList.add('blink-animation');
+            setTimeout(() => {
+                counterImg.classList.remove('blink-animation');
+            }, 2000);
         }
     }
-});
+    if (!isMuted){
+        clickSound.currentTime = 0;
+        clickSound.play();
+    }
 
+});
 resetBtn.addEventListener('click', () => {
-    currentCount = 0;
-    countDisplay.textContent = currentCount;
+    dhikrCounts[currentIndex] = 0;
+    countDisplay.textContent = 0;
     localStorage.setItem('dhikrCounts', JSON.stringify(dhikrCounts));
     if (!isMuted){
         clickSound.currentTime = 0;

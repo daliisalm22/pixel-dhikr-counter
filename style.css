@@ -158,3 +158,20 @@ h2{
 .color-buttons{
     margin-top: 10px;
 }
+
+
+#target-select{
+    font-family: 'Handjet', sans-serif;
+    border: solid 2px var(--black);
+    margin-top: 10px;
+}
+
+@keyframes targetBlink{
+    0% {opacity: 1;}
+    50% {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+
+.blink-animation{
+    animation: targetBlink 0.4s ease-in-out infinite;
+}
