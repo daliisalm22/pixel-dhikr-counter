@@ -78,4 +78,45 @@ h2{
     font-family: 'Handjet', sans-serif;
     background: transparent;
     border: none;
+    opacity: 0.77;
+}
+
+#prev-btn{
+    position: absolute;
+    z-index: 10000;
+    transform: translate(-190px, 25px);
+}
+
+#next-btn{
+    position: absolute;
+    z-index: 10000;
+    transform: translate(170px, -71px);
+}
+
+#count-txt{
+    position: absolute;
+    z-index: 10000;
+    transform: translate(-173px, 131px);
+    font-family: 'Handjet', sans-serif;
+    color: var(--white);
+    font-size: 15px;
+    background: transparent;
+    border: none;
+}
+
+#reset-txt{
+    position: absolute;
+    z-index: 10000;
+    transform: translate(-111px, 131px);
+    font-size: 15px;
+    color: var(--white);
+    font-family: 'Handjet', sans-serif;
+    background: transparent;
+    border: none;
+}
+.action-btn{
+    width: 34px;
+    height: 32px;
+    align-content: center;
+    margin-top: 8px;
 }

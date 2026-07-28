@@ -8,15 +8,12 @@
     </head>
     <body>
         <h1>𐙚 pixel dhikr counter ⋆.˚˖࿔</h1>
-        <p>⊹₊ ⋆.𖥔 ݁ ˖⋆.ೃ࿔*:･٠ ࣪⭑</p>
 
         <div class="app-container">
             <div class="text-area">
+                <button id="prev-btn" style="background-color: var(--white);">◀</button>
                 <h2 id="english-text">Subhanallah</h3>
                 <h2 id="arabic-text">سُبْحَانَ ٱللَّٰهِ</h3>
-            </div>
-            <div class ="dhikr-controls">
-                <button id="prev-btn" style="background-color: var(--white);">◀</button>
                 <button id="next-btn" style="background-color: var(--white);">▶</button>
             </div>
 
@@ -25,6 +22,8 @@
                 <button id="counter-btn"><img id="counter-btn-img" src="img/counter-btn.png" alt="img of the counter button"></button>
                 <button id="reset-btn"><img id="reset-btn-img" src="img/reset-btn.png" alt="img of the reset button"></button>
                 <button id="count-display">0</button>
+                <button id="count-txt">COUNT</button>
+                <button id="reset-txt">RESET</button>
                 <br>
             </div>
 
@@ -39,11 +38,13 @@
                 </div>
 
                 <div class="action-buttons">
-                    <button class="action-btn" style="background-color: var(--white);"> </button>
-                    <button class="action-btn" style="background-color: var(--white);"> </button>
+                    <button class="action-btn" style="background-color: var(--white);"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="2 -2 24 24" width="24" height="24"><path d="M13 22h-2v-2H9v-2h2V6H9V4h2V2h2v20Zm-4-4H7v-2h2v2Zm10 0h-4v-2h4v2ZM7 10H5v4h2v2H3V8h4v2Zm14 6h-2V8h2v8Zm-4-2h-2v-4h2v4ZM9 8H7V6h2v2Zm10 0h-4V6h4v2Z"/></svg></button>
+                    <button class="action-btn" style="background-color: var(--white); fill: var(--black);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -2 24 24" fill="currentColor" width="24" height="24"><path d="M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-9-9v6h-2v-6h2Zm0-2h-2V7h2v2Zm7-5H4V2h16v2Z"/></svg></button>
                 </div>
             </div>
         </div>
+
+        <audio id="click-sound" src="click-sound.wav"></audio>
 
         <script src="script.js"></script>
     </body>

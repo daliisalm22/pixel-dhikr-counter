@@ -43,11 +43,16 @@ let currentCount = 0;
 const countDisplay = document.getElementById('count-display');
 const counterBtn = document.getElementById('counter-btn');
 const resetBtn = document.getElementById('reset-btn');
+const clickSound = document.getElementById('click-sound');
 counterBtn.addEventListener('click', () => {
     currentCount++;
     countDisplay.textContent = currentCount;
+    clickSound.currentTime = 0;
+    clickSound.play();
 })
 resetBtn.addEventListener('click', () => {
     currentCount = 0;
     countDisplay.textContent = currentCount;
+    clickSound.currentTime = 0;
+    clickSound.play();
 })
