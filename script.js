@@ -41,6 +41,13 @@ const dhikrs = [
     {english: "Allahumma salli 'ala Muhammad", arabic: "ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ"},
     {english: "Hasbunallah wa ni'mal-wakil", arabic: "حَسْبُنَا ٱللَّٰهُ وَنِعْمَ ٱلْوَكِيلُ"},
 ];
+const colorNames = {
+    "#f4b8e4": "pink",
+    "#fde68a": "yellow",
+    "#b5c489": "green",
+    "#b4e1e9": "blue",
+    "#c6b9f7": "purple"
+};
 let currentIndex = localStorage.getItem('dhikrIndex') ? parseInt(localStorage.getItem('dhikrIndex')) : 0;
 let dhikrCounts = JSON.parse(localStorage.getItem('dhikrCounts')) || {};
 const englishDisplay = document.getElementById('english-text');
@@ -77,18 +84,35 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-
+let currentTarget = 33;
+const targetSelect = document.getElementById('target-select');
+const counterImg = document.getElementById('counter-img');
+targetSelect.addEventListener('change', (e) => {
+    currentTarget = parseInt(e.target.value);
+});
 counterBtn.addEventListener('click', () => {
     let currentCount = dhikrCounts[currentIndex] || 0;
     currentCount++;
     countDisplay.textContent = currentCount;
     dhikrCounts[currentIndex] = currentCount;
     localStorage.setItem('dhikrCounts', JSON.stringify(dhikrCounts));
-    if (!isMuted){
-        clickSound.currentTime = 0;
-        clickSound.play();
+    if (currentTarget > 0 && currentCount === currentTarget) {
+        if(!isMuted){
+            const goalSound = document.getElementById('goal-sound');
+            if (goalSound){
+                goalSound.currentTime = 0;
+                goalSound.play();
+            }
+        }
+    } 
+    else{
+            if (!isMuted){
+            clickSound.currentTime = 0;
+            clickSound.play();
+        }
     }
 });
+
 resetBtn.addEventListener('click', () => {
     currentCount = 0;
     countDisplay.textContent = currentCount;

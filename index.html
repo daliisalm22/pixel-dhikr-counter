@@ -27,14 +27,23 @@
                 <br>
             </div>
 
+            <div class="target-container">
+                <label for="target-select">goal: </label>
+                <select id="target-select">
+                    <option value="33">33</option>
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                    <option value="0">none</option>
+                </select>
+            </div>
+
             <div class="controls-area">
-                <br>
                 <div class="color-buttons">
-                    <button class="color-btn" data-color="var(--pink)" style="background-color: var(--pink);"></button>
-                    <button class="color-btn" data-color="var(--yellow)" style="background-color: var(--yellow);"> </button>
-                    <button class="color-btn" data-color="var(--green)" style="background-color: var(--green);"> </button>
-                    <button class="color-btn" data-color="var(--blue)" style="background-color: var(--blue);"> </button>
-                    <button class="color-btn" data-color="var(--purple)" style="background-color: var(--purple);"> </button>
+                    <button class="color-btn" data-name="pink" data-color="var(--pink)" style="background-color: var(--pink);"></button>
+                    <button class="color-btn" data-name="yellow" data-color="var(--yellow)" style="background-color: var(--yellow);"> </button>
+                    <button class="color-btn" data-name="green" data-color="var(--green)" style="background-color: var(--green);"> </button>
+                    <button class="color-btn" data-name="blue" data-color="var(--blue)" style="background-color: var(--blue);"> </button>
+                    <button class="color-btn" data-name="purple" data-color="var(--purple)" style="background-color: var(--purple);"> </button>
                 </div>
 
                 <div class="action-buttons">
@@ -62,6 +71,7 @@
 
         <audio id="click-sound" src="click-sound.wav"></audio>
         <audio id="click-sound-2" src="click-sound-2.wav"></audio>
+        <audio id="goal-sound" src="goal-sound.wav"></audio>
 
         <script src="script.js"></script>
     </body>
