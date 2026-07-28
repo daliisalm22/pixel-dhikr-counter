@@ -90,7 +90,7 @@ h2{
 #next-btn{
     position: absolute;
     z-index: 10000;
-    transform: translate(170px, -71px);
+    transform: translate(164px, -71px);
 }
 
 #count-txt{
@@ -119,4 +119,41 @@ h2{
     height: 32px;
     align-content: center;
     margin-top: 8px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 380px;
+    margin-top: -190px;
+    margin-left: -190px;
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    color: (--white);
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+}
+
+.modal-content{
+    text-align: center;
+    border: 3px solid var(--black);
+    color: var(--white);
+    width: 380px;
+    height: 380px;
+    box-shadow: 4px 4px 0px 0px rgba (0, 0, 0, 1);
+    font-size: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#close-modal{
+    font-family: 'Handjet', sans-serif;
+    color: var(--black);
+}
+
+h4{
+    font-size: 15px;
 }
