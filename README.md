@@ -63,8 +63,7 @@ u can now visit the live online version here: **https://daliisalm22.github.io/pi
 
 ## app demo video ^^
 
-
-
+https://github.com/user-attachments/assets/efac0a20-d5f7-4aa7-b1f0-e43ead92165c
 
 ︶⊹︶︶୨୧︶︶⊹︶
 
