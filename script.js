@@ -103,10 +103,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentTarget = 33;
     const targetSelect = document.getElementById('target-select');
+    const customTargetInput = document.getElementById('custom-target-input');
     const counterImg = document.getElementById('counter-img');
 
     targetSelect.addEventListener('change', (e) => {
-        currentTarget = parseInt(e.target.value);
+        if (e.target.value === 'custom'){
+            customTargetInput.style.display = 'inline-block';
+            currentTarget = parseInt(customTargetInput.value) || 0;
+        }
+        else{
+            customTargetInput.style.display = 'none';
+            currentTarget = parseInt(e.target.value);
+        }
+    });
+
+    customTargetInput.addEventListener('input', (e) => {
+        currentTarget = parseInt(e.target.value) || 0;
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && document.activeElement !== customTargetInput) {
+            e.preventDefault();
+            counterBtn.click();
+        }
     });
 
     counterBtn.addEventListener('click', () => {
