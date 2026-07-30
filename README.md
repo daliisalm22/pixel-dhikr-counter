@@ -55,6 +55,14 @@ i used ai mostly to fix bugs or to help me with brainless tasks like indenting 3
 
 ︶⊹︶︶୨୧︶︶⊹︶
 
+## setup instructions ⋅°❀⋆.ೃ࿔*:･
+
+* download or clone this repo
+* open the index.html file in ur browser by double clicking on it
+* andddd ur good to go (the web-app should open now in ur browser)
+
+︶⊹︶︶୨୧︶︶⊹︶
+
 ## ₊˚⊹ ࿔ how to visit
 
 u can now visit the live online version here: **https://daliisalm22.github.io/pixel-dhikr-counter/**
